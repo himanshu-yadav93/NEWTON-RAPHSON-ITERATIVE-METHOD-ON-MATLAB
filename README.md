@@ -12,10 +12,6 @@ Q-Limit Checking: Includes logic to monitor reactive power limits at PV buses to
 Sparse Jacobian Matrix: Efficiently constructs the Jacobian matrix using partial derivatives of $P$ and $Q$.
 Polar/Rectangular Utilities: Helper functions for coordinate conversions.
 
-**🛠 Mathematical Overview**
-
-The Newton-Raphson method solves the non-linear power flow equations by iteratively updating the voltage magnitudes and angles. The core of the algorithm is the Jacobian Matrix ($J$):$$\begin{bmatrix} \Delta P \\ \Delta Q \end{bmatrix} = \begin{bmatrix} J_1 & J_2 \\ J_3 & J_4 \end{bmatrix} \begin{bmatrix} \Delta \delta \\ \Delta |V| \end{bmatrix}$$Power Flow EquationsFor each bus $i$, the real ($P_i$) and reactive ($Q_i$) power injections are calculated as:$P_i = \sum_{k=1}^{n} |V_i||V_k|(G_{ik}\cos\theta_{ik} + B_{ik}\sin\theta_{ik})$$Q_i = \sum_{k=1}^{n} |V_i||V_k|(G_{ik}\sin\theta_{ik} - B_{ik}\cos\theta_{ik})$
-
 📝 Dependencies
 MATLAB (Tested on R2021a or later)
 
